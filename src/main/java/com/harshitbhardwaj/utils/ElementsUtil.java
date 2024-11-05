@@ -83,6 +83,7 @@ public class ElementsUtil {
         return switch (waitStrategy) {
             case PRESENCE -> wait.until(ExpectedConditions.presenceOfElementLocated(locator));
             case CLICKABLE -> wait.until(ExpectedConditions.elementToBeClickable(locator));
+            case VISIBLE -> wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
             default -> throw new UnsupportedOperationException("Unsupported wait strategy");
         };
     }

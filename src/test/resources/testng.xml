@@ -14,4 +14,9 @@
             <class name="com.harshitbhardwaj.tests.ConsumerProductPageTests"/>
         </classes>
     </test>
+    <test name="UseCasesPageTests">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.UseCasesPageTests"/>
+        </classes>
+    </test>
 </suite>
