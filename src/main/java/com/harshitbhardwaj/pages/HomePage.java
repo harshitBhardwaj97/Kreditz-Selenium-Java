@@ -73,6 +73,8 @@ public class HomePage {
     private final By investorsLink = By
             .xpath("//a[@href='/about#investors' and contains(., 'The investors')]");
 
+    private final By careersLink = By.linkText("Careers");
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
         this.elementsUtil = new ElementsUtil(driver);
@@ -263,5 +265,11 @@ public class HomePage {
         elementsUtil.clickUsingJavaScript(investorsLink, WaitStrategy.PRESENCE);
         elementsUtil.waitForUrlContains(Constants.getAboutUsLink());
         return elementsUtil.getPageURL().equals(Constants.getInvestorsLink());
+    }
+
+    public boolean careersLinkWorksFine() {
+        elementsUtil.clickOnElement(careersLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getCareersLink());
+        return elementsUtil.getPageURL().equals(Constants.getCareersLink());
     }
 }

@@ -140,4 +140,9 @@ public class HomePageTests extends BaseTest {
     public void investorsLinkWorksFine() {
         Assert.assertTrue(homePage.investorsLinkWorksFine());
     }
+
+    @Test
+    public void careersLinkWorksFine() {
+        Assert.assertTrue(homePage.careersLinkWorksFine());
+    }
 }

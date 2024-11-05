@@ -54,6 +54,8 @@ public class Constants {
     private static final String BOARD_MEMBERS_LINK = ABOUT_US_LINK + "#board-members";
     private static final String INVESTORS_LINK = ABOUT_US_LINK + "#investors";
 
+    private static final String CAREERS_LINK = "https://careers.kreditz.com/";
+
     private Constants() {
     }
 
@@ -195,5 +197,9 @@ public class Constants {
 
     public static String getInvestorsLink() {
         return INVESTORS_LINK;
+    }
+
+    public static String getCareersLink() {
+        return CAREERS_LINK;
     }
 }
