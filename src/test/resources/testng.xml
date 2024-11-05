@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="HomePageTestsSuite" parallel="classes" thread-count="2">
+    <listeners>
+        <listener class-name="com.harshitbhardwaj.listener.AnnotationTransformer"/>
+        <listener class-name="com.harshitbhardwaj.listener.AllureTestLifeCycleListener"/>
+    </listeners>
+    <test name="HomePageTests">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.HomePageTests"/>
+        </classes>
+    </test>
+</suite>
