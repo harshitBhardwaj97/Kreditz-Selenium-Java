@@ -86,14 +86,4 @@ public class ElementsUtil {
             default -> throw new UnsupportedOperationException("Unsupported wait strategy");
         };
     }
-
-//    private WebElement explicitlyWaitClickable(By locator) {
-//        return new WebDriverWait(driver, Duration.ofSeconds(Constants.getExplicitWaitLong()))
-//                .until(ExpectedConditions.elementToBeClickable(locator));
-//    }
-//
-//    private WebElement explicitlyWaitPresence(By locator) {
-//        return new WebDriverWait(driver, Duration.ofSeconds(Constants.getExplicitWaitLong()))
-//                .until(ExpectedConditions.presenceOfElementLocated(locator));
-//    }
 }
