@@ -63,6 +63,16 @@ public class HomePage {
     private final By useCasesInsuranceLink = By
             .xpath("//a[@href='/use-cases#insurance' and contains(., 'Insurance')]");
 
+    private final By aboutUsLink = By.linkText("About us");
+    private final By aboutKreditzLink = By
+            .xpath("//a[@href='/about#about-kreditz' and contains(., 'About Kreditz')]");
+    private final By teamLink = By
+            .xpath("//a[@href='/about#team-members' and contains(., 'The team')]");
+    private final By boardMembersLink = By
+            .xpath("//a[@href='/about#board-members' and contains(., 'The board')]");
+    private final By investorsLink = By
+            .xpath("//a[@href='/about#investors' and contains(., 'The investors')]");
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
         this.elementsUtil = new ElementsUtil(driver);
@@ -225,5 +235,33 @@ public class HomePage {
         elementsUtil.clickUsingJavaScript(useCasesInsuranceLink, WaitStrategy.PRESENCE);
         elementsUtil.waitForUrlContains(Constants.getUseCasesLink());
         return elementsUtil.getPageURL().equals(Constants.getInsuranceLink());
+    }
+
+    public boolean aboutKreditzLinkWorksFine() {
+        elementsUtil.hoverOnElement(aboutUsLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(aboutKreditzLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getAboutKreditzLink());
+        return elementsUtil.getPageURL().equals(Constants.getAboutKreditzLink());
+    }
+
+    public boolean teamLinkWorksFine() {
+        elementsUtil.hoverOnElement(aboutUsLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(teamLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getAboutUsLink());
+        return elementsUtil.getPageURL().equals(Constants.getTeamLink());
+    }
+
+    public boolean boardMembersLinkWorksFine() {
+        elementsUtil.hoverOnElement(aboutUsLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(boardMembersLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getAboutUsLink());
+        return elementsUtil.getPageURL().equals(Constants.getBoardMembersLink());
+    }
+
+    public boolean investorsLinkWorksFine() {
+        elementsUtil.hoverOnElement(aboutUsLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(investorsLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getAboutUsLink());
+        return elementsUtil.getPageURL().equals(Constants.getInvestorsLink());
     }
 }

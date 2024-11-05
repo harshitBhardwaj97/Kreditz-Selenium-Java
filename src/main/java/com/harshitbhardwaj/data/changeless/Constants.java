@@ -45,6 +45,15 @@ public class Constants {
     private static final String AUDITING_LINK = USE_CASES_LINK + "#auditing";
     private static final String INSURANCE_LINK = USE_CASES_LINK + "#insurance";
 
+    /*
+    ABOUT-US PAGE LINKS
+    */
+    private static final String ABOUT_US_LINK = BASE_URL + "about";
+    private static final String ABOUT_KREDITZ_LINK = ABOUT_US_LINK + "#about-kreditz";
+    private static final String TEAM_LINK = ABOUT_US_LINK + "#team-members";
+    private static final String BOARD_MEMBERS_LINK = ABOUT_US_LINK + "#board-members";
+    private static final String INVESTORS_LINK = ABOUT_US_LINK + "#investors";
+
     private Constants() {
     }
 
@@ -166,5 +175,25 @@ public class Constants {
 
     public static String getInsuranceLink() {
         return INSURANCE_LINK;
+    }
+
+    public static String getAboutUsLink() {
+        return ABOUT_US_LINK;
+    }
+
+    public static String getAboutKreditzLink() {
+        return ABOUT_KREDITZ_LINK;
+    }
+
+    public static String getTeamLink() {
+        return TEAM_LINK;
+    }
+
+    public static String getBoardMembersLink() {
+        return BOARD_MEMBERS_LINK;
+    }
+
+    public static String getInvestorsLink() {
+        return INVESTORS_LINK;
     }
 }

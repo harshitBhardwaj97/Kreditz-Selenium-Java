@@ -120,4 +120,24 @@ public class HomePageTests extends BaseTest {
     public void useCasesInsuranceLinkWorksFine() {
         Assert.assertTrue(homePage.useCasesInsuranceLinkWorksFine());
     }
+
+    @Test
+    public void aboutKreditzLinkWorksFine() {
+        Assert.assertTrue(homePage.aboutKreditzLinkWorksFine());
+    }
+
+    @Test
+    public void teamLinkWorksFine() {
+        Assert.assertTrue(homePage.teamLinkWorksFine());
+    }
+
+    @Test
+    public void boardMembersLinkWorksFine() {
+        Assert.assertTrue(homePage.boardMembersLinkWorksFine());
+    }
+
+    @Test
+    public void investorsLinkWorksFine() {
+        Assert.assertTrue(homePage.investorsLinkWorksFine());
+    }
 }
