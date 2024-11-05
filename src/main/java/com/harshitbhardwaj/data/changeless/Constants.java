@@ -34,9 +34,18 @@ public class Constants {
     private static final String CORPORATE_CREDIT_DECISIONING_LINK = CORPORATE_PRODUCT_LINK + "?tab=5";
     private static final String CORPORATE_CUSTOM_PRODUCTS_LINK = CORPORATE_PRODUCT_LINK + "?tab=6";
 
+    /*
+    USE-CASES PAGE LINKS
+    */
+    private static final String USE_CASES_LINK = BASE_URL + "use-cases";
+    private static final String CONSUMER_LENDING_LINK = USE_CASES_LINK + "#consumer-lending";
+    private static final String BUSINESS_LENDING_LINK = USE_CASES_LINK + "#business-landing";
+    private static final String MONEY_GAMBLING_LINK = USE_CASES_LINK + "#money-transfer";
+    private static final String ONLINE_GAMBLING_LINK = USE_CASES_LINK + "#online-gambling";
+    private static final String AUDITING_LINK = USE_CASES_LINK + "#auditing";
+    private static final String INSURANCE_LINK = USE_CASES_LINK + "#insurance";
 
     private Constants() {
-
     }
 
     public static String getBaseUrl() {
@@ -129,5 +138,33 @@ public class Constants {
 
     public static String getCorporateCustomProductsLink() {
         return CORPORATE_CUSTOM_PRODUCTS_LINK;
+    }
+
+    public static String getUseCasesLink() {
+        return USE_CASES_LINK;
+    }
+
+    public static String getConsumerLendingLink() {
+        return CONSUMER_LENDING_LINK;
+    }
+
+    public static String getBusinessLendingLink() {
+        return BUSINESS_LENDING_LINK;
+    }
+
+    public static String getMoneyGamblingLink() {
+        return MONEY_GAMBLING_LINK;
+    }
+
+    public static String getOnlineGamblingLink() {
+        return ONLINE_GAMBLING_LINK;
+    }
+
+    public static String getAuditingLink() {
+        return AUDITING_LINK;
+    }
+
+    public static String getInsuranceLink() {
+        return INSURANCE_LINK;
     }
 }

@@ -39,5 +39,4 @@ public class Driver {
             DriverManager.quit();
         }
     }
-
 }

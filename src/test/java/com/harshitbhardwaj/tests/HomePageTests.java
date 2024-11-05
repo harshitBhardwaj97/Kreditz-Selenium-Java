@@ -90,4 +90,34 @@ public class HomePageTests extends BaseTest {
     public void corporateCustomProductsLinkWorksFine() {
         Assert.assertTrue(homePage.corporateCustomProductsLinkWorksFine());
     }
+
+    @Test
+    public void useCasesConsumerLendingLinkWorksFine() {
+        Assert.assertTrue(homePage.useCasesConsumerLendingLinkWorksFine());
+    }
+
+    @Test
+    public void useCasesBusinessLendingLinkWorksFine() {
+        Assert.assertTrue(homePage.useCasesBusinessLendingLinkWorksFine());
+    }
+
+    @Test
+    public void useCasesMoneyGamblingLinkWorksFine() {
+        Assert.assertTrue(homePage.useCasesMoneyGamblingLinkWorksFine());
+    }
+
+    @Test
+    public void useCasesOnlineGamblingLinkWorksFine() {
+        Assert.assertTrue(homePage.useCasesOnlineGamblingLinkWorksFine());
+    }
+
+    @Test
+    public void useCasesAuditingLinkWorksFine() {
+        Assert.assertTrue(homePage.useCasesAuditingLinkWorksFine());
+    }
+
+    @Test
+    public void useCasesInsuranceLinkWorksFine() {
+        Assert.assertTrue(homePage.useCasesInsuranceLinkWorksFine());
+    }
 }

@@ -3,7 +3,6 @@ package com.harshitbhardwaj.pages;
 import com.harshitbhardwaj.WaitStrategy;
 import com.harshitbhardwaj.data.changeless.Constants;
 import com.harshitbhardwaj.utils.ElementsUtil;
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -50,43 +49,51 @@ public class HomePage {
     private final By corporateCustomProductsLink = By
             .xpath("//a[@href='/corporate-product?tab=6' and contains(., 'Custom products')]");
 
+    private final By useCasesLink = By.linkText("Use Cases");
+    private final By useCasesConsumerLendingLink = By
+            .xpath("//a[@href='/use-cases#consumer-lending' and contains(., 'Consumer lending')]");
+    private final By useCasesBusinessLendingLink = By
+            .xpath("//a[@href='/use-cases#business-landing' and contains(., 'Business lending')]");
+    private final By useCasesMoneyGamblingLink = By
+            .xpath("//a[@href='/use-cases#money-transfer' and contains(., 'Money transfer')]");
+    private final By useCasesOnlineGamblingLink = By
+            .xpath("//a[@href='/use-cases#online-gambling' and contains(., 'Online gambling')]");
+    private final By useCasesAuditingLink = By
+            .xpath("//a[@href='/use-cases#auditing' and contains(., 'Auditing')]");
+    private final By useCasesInsuranceLink = By
+            .xpath("//a[@href='/use-cases#insurance' and contains(., 'Insurance')]");
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
         this.elementsUtil = new ElementsUtil(driver);
     }
 
-    @Step("Checking for main heading")
     public boolean isMainHeadingAvailable() {
         return elementsUtil.getElementVisibility(mainHeading, WaitStrategy.PRESENCE);
     }
 
-    @Step("Checking linkedin link")
     public boolean linkedinLinkWorksFine() {
         elementsUtil.clickOnElement(linkedInLink, WaitStrategy.CLICKABLE);
         elementsUtil.waitUrlToBe(Constants.getLinkedinUrl());
         return elementsUtil.getPageURL().equals(Constants.getLinkedinUrl());
     }
 
-    @Step("Clicking on demo button")
     public void clickOnDemo() {
         elementsUtil.clickOnElement(bookADemoButton, WaitStrategy.CLICKABLE);
     }
 
-    @Step("Checking instagram link")
     public boolean instagramLinkWorksFine() {
         elementsUtil.clickOnElement(instagramLink, WaitStrategy.CLICKABLE);
         elementsUtil.waitUrlToBe(Constants.getInstagramUrl());
         return elementsUtil.getPageURL().equals(Constants.getInstagramUrl());
     }
 
-    @Step("Checking twitter link")
     public boolean twitterLinkWorksFine() {
         elementsUtil.clickOnElement(twitterLink, WaitStrategy.CLICKABLE);
         elementsUtil.waitUrlToBe(Constants.getTwitterUrl());
         return elementsUtil.getPageURL().equals(Constants.getTwitterUrl());
     }
 
-    //    @Step("Checking Consumer-Products income verification link")
     public boolean productsIncomeVerificationLinkWorksFine() {
         elementsUtil.hoverOnElement(productsLink, WaitStrategy.PRESENCE);
         elementsUtil.clickUsingJavaScript(productsIncomeVerificationLink, WaitStrategy.PRESENCE);
@@ -178,5 +185,45 @@ public class HomePage {
         return elementsUtil.getPageURL().equals(Constants.getCorporateCustomProductsLink());
     }
 
+    public boolean useCasesConsumerLendingLinkWorksFine() {
+        elementsUtil.hoverOnElement(useCasesLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(useCasesConsumerLendingLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getUseCasesLink());
+        return elementsUtil.getPageURL().equals(Constants.getConsumerLendingLink());
+    }
 
+    public boolean useCasesBusinessLendingLinkWorksFine() {
+        elementsUtil.hoverOnElement(useCasesLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(useCasesBusinessLendingLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getUseCasesLink());
+        return elementsUtil.getPageURL().equals(Constants.getBusinessLendingLink());
+    }
+
+    public boolean useCasesMoneyGamblingLinkWorksFine() {
+        elementsUtil.hoverOnElement(useCasesLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(useCasesMoneyGamblingLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getUseCasesLink());
+        return elementsUtil.getPageURL().equals(Constants.getMoneyGamblingLink());
+    }
+
+    public boolean useCasesOnlineGamblingLinkWorksFine() {
+        elementsUtil.hoverOnElement(useCasesLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(useCasesOnlineGamblingLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getUseCasesLink());
+        return elementsUtil.getPageURL().equals(Constants.getOnlineGamblingLink());
+    }
+
+    public boolean useCasesAuditingLinkWorksFine() {
+        elementsUtil.hoverOnElement(useCasesLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(useCasesAuditingLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getUseCasesLink());
+        return elementsUtil.getPageURL().equals(Constants.getAuditingLink());
+    }
+
+    public boolean useCasesInsuranceLinkWorksFine() {
+        elementsUtil.hoverOnElement(useCasesLink, WaitStrategy.PRESENCE);
+        elementsUtil.clickUsingJavaScript(useCasesInsuranceLink, WaitStrategy.PRESENCE);
+        elementsUtil.waitForUrlContains(Constants.getUseCasesLink());
+        return elementsUtil.getPageURL().equals(Constants.getInsuranceLink());
+    }
 }
