@@ -2,10 +2,7 @@ package com.harshitbhardwaj.base;
 
 import com.harshitbhardwaj.data.changeless.Constants;
 import com.harshitbhardwaj.driver.Driver;
-import com.harshitbhardwaj.pages.AboutUsPage;
-import com.harshitbhardwaj.pages.ConsumerProductsPage;
-import com.harshitbhardwaj.pages.HomePage;
-import com.harshitbhardwaj.pages.UseCasesPage;
+import com.harshitbhardwaj.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,6 +14,7 @@ public class BaseTest {
     protected ConsumerProductsPage consumerProductsPage;
     protected UseCasesPage useCasesPage;
     protected AboutUsPage aboutUsPage;
+    protected ContactUsPage contactUsPage;
 
     protected BaseTest() {
     }
@@ -28,6 +26,7 @@ public class BaseTest {
         consumerProductsPage = new ConsumerProductsPage(driver.get());
         useCasesPage = new UseCasesPage(driver.get());
         aboutUsPage = new AboutUsPage(driver.get());
+        contactUsPage = new ContactUsPage(driver.get());
         driver.get().get(Constants.getBaseUrl());
     }
 
