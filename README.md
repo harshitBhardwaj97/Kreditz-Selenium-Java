@@ -112,6 +112,7 @@ Below is a list of all the test cases organized by pages:
 ### 4. **ContactUsPageTests**
 
 - **verifyContactUsHeadingIsVisible**: Verifying if the contact us heading is visible on the Contact Us page.
+- **verifyErrorMessagesAreDisplayed**: Verifying if error messages are displayed when required fields are not filled.
 
 ### 5. **UseCasesPageTests**
 

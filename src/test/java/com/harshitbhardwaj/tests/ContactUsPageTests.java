@@ -20,4 +20,14 @@ public class ContactUsPageTests extends BaseTest {
     public void verifyContactUsHeadingIsVisible() {
         Assert.assertTrue(contactUsPage.isContactSalesHeadingDisplayed());
     }
+
+    @Test
+    @Step("Verifying contact form shows error messages if details are not filled")
+    public void verifyErrorMessagesAreDisplayed() {
+        contactUsPage.clickSubmitButton();
+        Assert.assertTrue(contactUsPage.isFirstNameErrorMessageIsDisplayed());
+        Assert.assertTrue(contactUsPage.isLastNameErrorMessageIsDisplayed());
+        Assert.assertTrue(contactUsPage.isEmailErrorMessageIsDisplayed());
+        Assert.assertTrue(contactUsPage.isCompanyErrorMessageIsDisplayed());
+    }
 }
