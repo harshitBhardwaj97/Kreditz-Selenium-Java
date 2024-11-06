@@ -19,4 +19,9 @@
             <class name="com.harshitbhardwaj.tests.UseCasesPageTests"/>
         </classes>
     </test>
+    <test name="AboutUsPageTests">
+        <classes>
+            <class name="com.harshitbhardwaj.tests.AboutUsPageTests"/>
+        </classes>
+    </test>
 </suite>

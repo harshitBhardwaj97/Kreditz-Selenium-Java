@@ -2,6 +2,7 @@ package com.harshitbhardwaj.base;
 
 import com.harshitbhardwaj.data.changeless.Constants;
 import com.harshitbhardwaj.driver.Driver;
+import com.harshitbhardwaj.pages.AboutUsPage;
 import com.harshitbhardwaj.pages.ConsumerProductsPage;
 import com.harshitbhardwaj.pages.HomePage;
 import com.harshitbhardwaj.pages.UseCasesPage;
@@ -15,6 +16,7 @@ public class BaseTest {
     protected HomePage homePage;
     protected ConsumerProductsPage consumerProductsPage;
     protected UseCasesPage useCasesPage;
+    protected AboutUsPage aboutUsPage;
 
     protected BaseTest() {
     }
@@ -25,6 +27,7 @@ public class BaseTest {
         homePage = new HomePage(driver.get());
         consumerProductsPage = new ConsumerProductsPage(driver.get());
         useCasesPage = new UseCasesPage(driver.get());
+        aboutUsPage = new AboutUsPage(driver.get());
         driver.get().get(Constants.getBaseUrl());
     }
 
